@@ -1,0 +1,150 @@
+.addUser{
+    width: max-content;
+    height: max-content;
+    padding: 30px;
+    background-color: rgba(17, 25, 40, 0.781);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    form{
+        display: flex;
+        gap: 20px;
+
+        input{
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        button{
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .user{
+        margin-top: 50px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        .detail{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* Responsive Media Queries */
+
+/* Tablets and small laptops */
+@media only screen and (max-width: 1024px) {
+    .addUser {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    form {
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 15px;
+
+        input, button {
+            padding: 15px; /* Reduce padding inside inputs and buttons */
+            width: 100%; /* Ensure inputs/buttons take up full width */
+        }
+    }
+
+    .user {
+        flex-direction: column; /* Stack user details and button vertically */
+        margin-top: 30px;
+
+        .detail {
+            gap: 10px; /* Reduce the gap between image and user details */
+        }
+    }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+    .addUser {
+        padding: 15px;
+        width: 100%; /* Ensure the addUser box is full width */
+        height: auto; /* Auto height for mobile screens */
+    }
+
+    form {
+        gap: 10px;
+
+        input, button {
+            padding: 10px;
+        }
+    }
+
+    .user {
+        margin-top: 20px;
+    }
+
+    .detail {
+        img {
+            width: 40px; /* Reduce image size */
+            height: 40px;
+        }
+    }
+
+    button {
+        padding: 8px; /* Smaller buttons for mobile */
+    }
+}
+
+/* Smaller mobile devices */
+@media only screen and (max-width: 480px) {
+    .addUser {
+        padding: 10px;
+    }
+
+    form {
+        gap: 5px;
+
+        input, button {
+            padding: 8px;
+        }
+    }
+
+    .user {
+        margin-top: 15px;
+    }
+
+    .detail {
+        img {
+            width: 35px; /* Further reduce image size */
+            height: 35px;
+        }
+    }
+}
